@@ -33,12 +33,75 @@
     justify-content: center;
     align-items: flex-end;
     position: relative;
+    flex-direction: row;
 
 }
 
 .background .logo .brush1 .color {
     width: 100%;
     height: 100%;
-    background-color: red;
-  }
-  
+    background-color: rgb(194, 0, 0);
+    position: relative;
+    z-index: 2;
+    animation: moveup 0.5s ease forwards;
+}
+
+.background .logo .brush2{
+    width: 50px;
+    height: 220px;
+    display: flex;
+    align-items: flex-end;
+    
+
+
+
+}
+
+
+.background .logo .brush2 .color2{
+    width: 100%;
+    height: 0%;
+    background-color: rgb(194, 0, 0);
+    animation: moveup 0.5s ease forwards;
+    animation-delay: 1s;
+
+
+}
+
+.background .logo .brush3 {
+    width: 50px;
+    height: 0;
+    position: absolute;
+    z-index: 2;
+    transform: skew(24.2deg);
+    transform-origin: top left;
+    background: red;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.33);
+    animation: moveup 0.5s ease forwards;
+    animation-delay: 0.50s;
+
+}
+
+
+
+/*animação de enttrada */
+
+@keyframes moveup{
+    from {
+        height: 0;
+    } to{
+        height: 220px;
+    }
+}
+
+
+/*animação de contraria */
+
+
+@keyframes movedown{
+    from {
+        height: 220px;
+    } to{
+        height: 0;
+    }
+}
